@@ -51,6 +51,23 @@ namespace linkPrac31
                 Console.WriteLine(item.C);
                 Console.WriteLine();
             }
+
+            List<product> foods = new List<product>
+            {
+                new product () {Name = "군고구마", Price = 1500},
+                new product () {Name = "호떡", Price = 1000},
+                new product () {Name = "붕어빵", Price = 1200},
+                new product () {Name = "오뎅", Price = 800},
+            };
+
+            var output6 = from food in foods
+                          where food.Price > 1500
+                          orderby food.Name ascending
+                          select food;
+
+            foreach(var item in output6) {
+                Console.WriteLine(item);
+            }
         }
     }
 }
