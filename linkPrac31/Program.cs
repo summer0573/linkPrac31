@@ -8,15 +8,19 @@ namespace linkPrac31
 {
     internal static class Program
     {
-        /// <summary>
-        /// 해당 애플리케이션의 주 진입점입니다.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            List<int> input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            List<int> output = new List<int>();
+
+            foreach(var item in input)
+            {
+                if(item % 2 == 0) output.Add(item);
+            }
+            foreach(var item in output)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
